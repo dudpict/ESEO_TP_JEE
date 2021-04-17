@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	
+	<servlet>
+		<servlet-name>Accueil</servlet-name>
+		<servlet-class>com.ocTwic.servlets.Accueil</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Accueil</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>AddVille</servlet-name>
+		<servlet-class>com.ocTwic.servlets.AddVille</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddVille</servlet-name>
+		<url-pattern>/new</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>ShowVilles</servlet-name>
+		<servlet-class>com.ocTwic.servlets.ShowVilles</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowVilles</servlet-name>
+		<url-pattern>/villes</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>DeleteVille</servlet-name>
+		<servlet-class>com.ocTwic.servlets.DeleteVille</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DeleteVille</servlet-name>
+		<url-pattern>/bin</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>UpdateVille</servlet-name>
+		<servlet-class>com.ocTwic.servlets.UpdateVille</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateVille</servlet-name>
+		<url-pattern>/refresh</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>CalculDistance</servlet-name>
+		<servlet-class>com.ocTwic.servlets.CalculDistance</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CalculDistance</servlet-name>
+		<url-pattern>/vroum</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
+</web-app>
