@@ -12,8 +12,10 @@
 		<%@ include file="menu.jsp"%>
 		
 	</div>
-
-		<form method="post" action="new">
+	
+	<c:if test="${ empty villeToAdd }">
+	
+	<form method="post" action="new">
 			<label for="nom">Nom : </label> <input type="text" name="nom"
 				id="nom" /> <label for="cc">Code de la commune : </label> <input
 				type="text" name="cc" id="cc" /> <br /> <label for="cp">Code
@@ -24,7 +26,15 @@
 				: </label> <input type="text" name="lon" id="lon" /> <br /> <label
 				for="lat">Latitude : </label> <input type="text" name="lat" id="lat" />
 			<br /> <input value="ajouter" type="submit" />
-		</form>
+		</form> 
+		
+	</c:if>
+	
+	<c:if test="${ !empty villeToAdd }">
+		<c:out value="Ajout de la ville ${ villeToAdd } effectué! "></c:out>
+	</c:if>
+
+		
 
 	
 

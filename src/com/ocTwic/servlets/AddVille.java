@@ -47,6 +47,8 @@ public class AddVille extends HttpServlet {
 		String lat = request.getParameter("lat");
 		String ligne = request.getParameter("ligne");
 		
+		request.setAttribute("villeToAdd", nom);
+		
 		VilleDaoImpl villeDaoImpl = new VilleDaoImpl();
 		villeDaoImpl.addVille(nom, cc, cp, libelle, ligne, lat, lon);
 		
